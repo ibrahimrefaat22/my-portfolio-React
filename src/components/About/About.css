@@ -1,0 +1,302 @@
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Orbs */
+.about__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.about__orb--1 {
+  width: 500px;
+  height: 500px;
+  background: var(--primary);
+  top: 10%;
+  left: -10%;
+}
+
+.about__orb--2 {
+  width: 400px;
+  height: 400px;
+  background: var(--secondary);
+  bottom: 10%;
+  right: -10%;
+}
+
+/* Grid Layout */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Story Section */
+.about__story {
+  position: relative;
+}
+
+.about__story-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(108, 99, 255, 0.08);
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.about__story-badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.about__story-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 28px;
+}
+
+.about__story-title--accent {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about__story-text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 36px;
+}
+
+.about__story-text p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.about__story-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Info Cards */
+.about__info-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.about__info-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+  cursor: default;
+}
+
+.about__info-card:hover {
+  background: var(--glass-hover);
+}
+
+.about__info-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(108, 99, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.about__info-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.about__info-card-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about__info-card-value {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Highlights */
+.about__highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about__highlights-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.about__highlights-line {
+  width: 30px;
+  height: 1px;
+  background: var(--primary);
+}
+
+/* Highlight Card */
+.about__highlight-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid transparent;
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+  cursor: default;
+}
+
+.about__highlight-card:hover {
+  border-left-color: var(--primary);
+}
+
+.about__highlight-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  min-width: 65px;
+  flex-shrink: 0;
+}
+
+.about__highlight-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.about__highlight-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about__highlight-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Philosophy Quote */
+.about__philosophy {
+  margin-top: 10px;
+  padding: 28px;
+  background: var(--gradient-glow);
+  border: 1px solid rgba(108, 99, 255, 0.15);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.about__philosophy-icon {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: -10px;
+  opacity: 0.5;
+}
+
+.about__philosophy-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.about__philosophy-author {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about__highlight-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about__highlight-number {
+    font-size: 1.5rem;
+  }
+
+  .about__story-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__highlight-card {
+    padding: 18px;
+  }
+
+  .about__philosophy {
+    padding: 20px;
+  }
+}
